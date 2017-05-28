@@ -14,5 +14,6 @@
         <property name="sex" type="java.lang.String">
             <column name="SEX" />
         </property>
+        <many-to-one name="grade" class="com.zy.entity.Grade" column="gid" cascade="all"></many-to-one>
     </class>
 </hibernate-mapping>

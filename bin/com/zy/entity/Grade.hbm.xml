@@ -14,11 +14,12 @@
         <property name="gdesc" type="java.lang.String">
             <column name="GDESC" />
         </property>
-        <set name="students" table="STUDENTS" inverse="false" lazy="true">
+        <set name="students" table="STUDENTS" inverse="true" cascade="save-update" lazy="true">
             <key>
                 <column name="GID" />
             </key>
             <one-to-many class="com.zy.entity.Student" />
         </set>
+        
     </class>
 </hibernate-mapping>
